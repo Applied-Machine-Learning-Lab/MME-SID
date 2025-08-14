@@ -1,0 +1,11 @@
+CUDA_VISIBLE_DEVICES='0' python generate_indices_MM.py\
+    --dataset Beauty \
+    --data_path_1 /dataset/SASRec_item_embed_new.pkl \
+    --data_path_2 /dataset/Beauty_llm2clip_pic_emb.pt \
+    --data_path_3 /dataset/Beauty_llm2clip_text_emb.pt \
+    --root_path /checkpoint/ \
+    --epoch 1000 \
+    --checkpoint /best_loss_model.pth \
+    --e_dim 4096 \
+    --num_emb_list 256 256 256 256 \
+    --layers 4096 4096 4096
