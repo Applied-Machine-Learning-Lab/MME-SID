@@ -1,0 +1,6 @@
+{
+    "description": "Template used by llama3-8b-instruct.",
+    "prompt_input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are a helpful AI assistant for recommendations<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nGiven the user's purchase history, predict next possible item to be purchased.",
+    "prompt_no_input": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n",
+    "response_split": "<|eot_id|><|start_header_id|>assistant<|end_header_id|>"
+}
