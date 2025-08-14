@@ -1,0 +1,4 @@
+transformers==4.47.0
+accelerate==0.26.0
+bitsandbytes==0.41.3
+llm2vec==0.2.2
