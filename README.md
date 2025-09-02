@@ -23,6 +23,8 @@ sh ./MM-RQ-VAE/train_tokenizer_MM.sh
 sh ./MM-RQ-VAE/tokenize_MM.sh
 ```
 
+Note: To generate Beauty_llm2clip_text_emb.pt and Beauty_llm2clip_pic_emb.pt, run dataset/preprocess/pic_text_embedding_generate.py
+
 **Stage 2: Fine-tuning**
 
 We fine-tune the Llama3-8B-instruct to conduct sequential recommendation task by running the following code. After training, the evaluation result on the test set will be shown. 
