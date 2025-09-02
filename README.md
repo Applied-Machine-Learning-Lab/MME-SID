@@ -23,7 +23,7 @@ sh ./MM-RQ-VAE/train_tokenizer_MM.sh
 sh ./MM-RQ-VAE/tokenize_MM.sh
 ```
 
-Note: To generate Beauty_llm2clip_text_emb.pt and Beauty_llm2clip_pic_emb.pt, run dataset/preprocess/pic_text_embedding_generate.py
+Note: To generate Beauty_llm2clip_text_emb.pt and Beauty_llm2clip_pic_emb.pt, run dataset/pic_text_embedding_generate.py
 
 **Stage 2: Fine-tuning**
 
