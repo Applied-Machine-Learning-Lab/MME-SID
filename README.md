@@ -1,5 +1,5 @@
 # CIKM25-MME-SID
-Code for paper titled '*Empowering Large Language Model for Sequential Recommendation via Multimodal Embeddings and Semantic IDs*' accepted to CIKM 2025 Full Research track. Tesla V100 or A100 GPUs are preferred. In the following, we take Amazon Beauty dataset as an example.
+Code for paper titled '*[Empowering Large Language Model for Sequential Recommendation via Multimodal Embeddings and Semantic IDs](https://arxiv.org/abs/2509.02017)*' accepted to CIKM 2025 Full Research track. Tesla V100 or A100 GPUs are preferred. In the following, we take Amazon Beauty dataset as an example.
 
 ## Code Running
 
