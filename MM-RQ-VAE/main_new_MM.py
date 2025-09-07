@@ -7,7 +7,7 @@ import logging
 from torch.utils.data import DataLoader
 import pickle
 from datasets_MM import EmbDataset
-from models.rqvae_mm import RQVAE
+from rqvae_mm import RQVAE
 from trainer_new_mm import Trainer
 import os
 
