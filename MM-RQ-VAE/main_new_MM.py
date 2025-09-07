@@ -6,7 +6,7 @@ from time import time
 import logging
 from torch.utils.data import DataLoader
 import pickle
-from datasets_MM import EmbDataset
+from datasets_mm import EmbDataset
 from rqvae_mm import RQVAE
 from trainer_new_mm import Trainer
 import os
