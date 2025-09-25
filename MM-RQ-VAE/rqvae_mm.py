@@ -87,7 +87,8 @@ class RQVAE(nn.Module):
         self.text_decode_layer_dims = self.text_encode_layer_dims[::-1]
         self.text_decoder = MLPLayers(layers=self.text_decode_layer_dims,
                                        dropout=self.dropout_prob,bn=self.bn) 
-        self.mkmmd_loss = MultipleKernelMaximumMeanDiscrepancy(kernels=[GaussianKernel(alpha=2 ** -1)])  
+        self.mkmmd_loss = MultipleKernelMaximumMeanDiscrepancy(kernels=[GaussianKernel(alpha=2 ** -1)])
+        self.infonce = InfoNCE()  
     def forward(self, x, y,z,labels,labels_2,labels_3, use_sk=True):
         x = self.encoder(x)
         y = self.pic_encoder(y)
@@ -124,6 +125,6 @@ class RQVAE(nn.Module):
             loss_recon = self.mkmmd_loss(out, xs)+self.mkmmd_loss(pic_out, ys)+self.mkmmd_loss(text_out, zs)
         else:
             raise ValueError('incompatible loss type')
-        total_loss = self.recon*loss_recon + self.quant_loss_weight * (quant_loss+quant_loss_2+quant_loss_3)+self.align*(self.mkmmd_loss(dense_out,dense_out_2)+self.mkmmd_loss(dense_out,dense_out_3))
+        total_loss = self.recon*loss_recon + self.quant_loss_weight * (quant_loss+quant_loss_2+quant_loss_3)+self.align*(self.infonce(dense_out,dense_out_2)+self.infonce(dense_out,dense_out_3))
 
         return total_loss, None, loss_recon, quant_loss
