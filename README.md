@@ -19,6 +19,7 @@ pip install -e .
 We save the pre-trained collaborative, textual, and visual embedding into SASRec_item_embed_new.pkl, Beauty_llm2clip_text_emb.pt, and Beauty_llm2clip_pic_emb.pt under dataset folder. Then the MM-RQ-VAE is trained to generate semantic IDs and codebook embeddings.
 
 ```
+python ./dataset/pic_text_embedding_generate.py #to generate Beauty_llm2clip_text_emb.pt and Beauty_llm2clip_pic_emb.pt
 sh ./MM-RQ-VAE/train_tokenizer_MM.sh
 sh ./MM-RQ-VAE/tokenize_MM.sh
 ```
