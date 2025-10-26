@@ -1,5 +1,5 @@
 # CIKM25-MME-SID
-Code for paper titled '*[Empowering Large Language Model for Sequential Recommendation via Multimodal Embeddings and Semantic IDs](https://arxiv.org/abs/2509.02017)*' accepted to CIKM 2025 Full Research track. Tesla V100 or A100 GPUs are preferred. In the following, we take Amazon Beauty dataset as an example.
+Code for paper titled '*[Empowering Large Language Model for Sequential Recommendation via Multimodal Embeddings and Semantic IDs](https://arxiv.org/abs/2509.02017)*' accepted to CIKM 2025 Full Research track. Tesla V100 or A100 GPUs are preferred. In the following, we take Amazon Beauty dataset as an example. For the other two datasets, we are sorry but we are unable to provide the pre-trained ID embeddings and multimodal embeddings. Interested users need to download the original dataset from [here](https://cseweb.ucsd.edu/~jmcauley/datasets/amazon/links.html) and further pre-process it.
 
 ## Code Running
 
@@ -24,7 +24,8 @@ sh ./MM-RQ-VAE/train_tokenizer_MM.sh
 sh ./MM-RQ-VAE/tokenize_MM.sh
 ```
 
-**Note**: To generate Beauty_llm2clip_text_emb.pt and Beauty_llm2clip_pic_emb.pt, run dataset/pic_text_embedding_generate.py
+**Note 1**: To generate Beauty_llm2clip_text_emb.pt and Beauty_llm2clip_pic_emb.pt, run dataset/pic_text_embedding_generate.py
+**Note 2**: You can refer to Phase 1 of [PAD](https://github.com/Applied-Machine-Learning-Lab/PAD) to obtain the collaborative embeddings on your own dataset.
 
 **Stage 2: Fine-tuning**
 
