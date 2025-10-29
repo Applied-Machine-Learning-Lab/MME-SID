@@ -25,6 +25,7 @@ sh ./MM-RQ-VAE/tokenize_MM.sh
 ```
 
 **Note 1**: To generate Beauty_llm2clip_text_emb.pt and Beauty_llm2clip_pic_emb.pt, run dataset/pic_text_embedding_generate.py
+
 **Note 2**: You can refer to Phase 1 of [PAD](https://github.com/Applied-Machine-Learning-Lab/PAD) to obtain the collaborative embeddings on your own dataset.
 
 **Stage 2: Fine-tuning**
